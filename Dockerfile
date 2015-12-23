@@ -1,4 +1,4 @@
-FROM sjoerdmulder/java8
+FROM anapsix/alpine-java:8
 
 RUN wget -O /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.8.2
 RUN chmod +x /usr/local/bin/docker
