@@ -1,8 +1,8 @@
 FROM cogniteev/oracle-java:java8
 
-RUN curl -o /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.8.2
+RUN wget -O /usr/local/bin/docker https://get.docker.com/builds/Linux/x86_64/docker-1.8.2
 RUN chmod +x /usr/local/bin/docker
-RUN curl -o /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/1.4.0/docker-compose-Linux-x86_64
+RUN wget -O /usr/local/bin/docker-compose https://github.com/docker/compose/releases/download/1.4.0/docker-compose-Linux-x86_64
 RUN chmod +x /usr/local/bin/docker-compose
 RUN groupadd docker
 
