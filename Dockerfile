@@ -9,13 +9,12 @@ RUN groupadd docker
 RUN apt-get update
 RUN apt-get install -y unzip iptables lxc fontconfig
 
-ENV LANG       en_US.UTF-8
-ENV LC_ALL     en_US.UTF-8
-
 EXPOSE 9090
 
 VOLUME /var/lib/docker
 VOLUME /data
+
+WORKDIR /data
 
 # Install sbt and node.js build repositories
 RUN echo "deb http://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
